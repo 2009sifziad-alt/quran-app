@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quran Reader</title>
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <div class="page-shell">
+    <header class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">114 Surahs</p>
+        <h1>Quran Reader</h1>
+        <p class="hero-text">
+          Read every surah of the Quran in one calm, searchable app.
+        </p>
+      </div>
+
+      <div class="hero-stats" aria-label="Quran summary">
+        <div class="stat-card">
+          <span class="stat-value">114</span>
+          <span class="stat-label">Surahs</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-value">6,236</span>
+          <span class="stat-label">Ayahs</span>
+        </div>
+      </div>
+    </header>
+
+    <main class="app-grid">
+      <section class="panel panel-list" aria-labelledby="surah-list-heading">
+        <div class="panel-top">
+          <div>
+            <p class="panel-kicker">Directory</p>
+            <h2 id="surah-list-heading">All Surahs</h2>
+          </div>
+          <p id="result-count" class="result-count">114 surahs</p>
+        </div>
+
+        <label class="search-wrap" for="search-input">
+          <span class="search-label">Search</span>
+          <input
+            id="search-input"
+            type="search"
+            placeholder="Search by number, English, or Arabic name"
+            autocomplete="off"
+          >
+        </label>
+
+        <div class="filter-row" role="group" aria-label="Revelation filters">
+          <button class="filter-chip is-active" data-filter="all" type="button">All</button>
+          <button class="filter-chip" data-filter="Meccan" type="button">Meccan</button>
+          <button class="filter-chip" data-filter="Medinan" type="button">Medinan</button>
+        </div>
+
+        <div id="surah-list" class="surah-list" role="list" aria-label="Surah list"></div>
+      </section>
+
+      <section class="panel panel-detail" aria-labelledby="detail-title">
+        <div id="detail-view" class="detail-view">
+          <div class="empty-state">
+            <h3>Loading Quran text</h3>
+            <p>The reader is getting ready.</p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="app-footer">
+      Arabic Quran text is bundled locally for reading inside this app.
+    </footer>
+  </div>
+
+  <script src="./data/quran-data.js"></script>
+  <script src="./app.js"></script>
+</body>
+</html>
